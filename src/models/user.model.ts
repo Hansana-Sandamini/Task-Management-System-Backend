@@ -1,11 +1,11 @@
 import mongoose, { Document, Schema } from "mongoose"
 
 export interface IUSER extends Document {
-  _id: mongoose.Types.ObjectId
-  firstname?: string
-  lastname?: string
-  email: string
-  password: string
+    _id: mongoose.Types.ObjectId
+    firstname?: string
+    lastname?: string
+    email: string
+    password: string
 }
 
 const userSchema = new Schema<IUSER>(
