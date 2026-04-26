@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 import { connectDB } from "./config/db"
 import authRouter from "./routes/auth.routes"
+import taskRouter from "./routes/task.routes"
 
 dotenv.config()
 
@@ -19,6 +20,7 @@ app.use(
 )
 
 app.use("/auth", authRouter)
+app.use("/tasks", taskRouter)
 
 const startServer = async () => {
     try {
