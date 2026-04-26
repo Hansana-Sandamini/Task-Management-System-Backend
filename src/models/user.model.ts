@@ -10,10 +10,23 @@ export interface IUSER extends Document {
 
 const userSchema = new Schema<IUSER>(
     {
-        firstname: { type: String, required: true },
-        lastname: { type: String, required: true },
-        email: { type: String, unique: true, lowercase: true, required: true },
-        password: { type: String, required: true },
+        firstname: { 
+            type: String, 
+            required: true 
+        },
+        lastname: { 
+            type: String, 
+            required: true 
+        },
+        email: { type: String, 
+            unique: true, 
+            lowercase: true, 
+            required: true 
+        },
+        password: { 
+            type: String, 
+            required: true 
+        }
     },
     { timestamps: true }
 )
