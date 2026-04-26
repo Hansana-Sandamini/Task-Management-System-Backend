@@ -29,8 +29,8 @@ export const authenticate = (
     }
 
     try {
-        const payload = jwt.verify(token, JWT_SECRET) as { id: string }
-        req.user = payload
+        const payload = jwt.verify(token, JWT_SECRET) as { sub: string }
+        req.user = { id: payload.sub }
         next()
     } catch {
         return res.status(403).json({ message: "Invalid or expired token" })
